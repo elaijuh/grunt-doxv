@@ -1,6 +1,6 @@
 {
   "name": "grunt-doxv",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Doxv grunt plugin",
   "main": "Gruntfile.js",
   "scripts": {
