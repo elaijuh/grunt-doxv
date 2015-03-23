@@ -17,6 +17,7 @@ module.exports = function(grunt) {
             doxvCmd = path.resolve(__dirname, "../node_modules/.bin/doxv"),
             options = this.options(),
             exclude = options.exclude,
+            css = options.css,
             args = [];
 
         args.push('-i');
@@ -34,6 +35,11 @@ module.exports = function(grunt) {
         if (exclude && exclude.length) {
             args.push('-e');
             args.push(exclude.join(','));
+        }
+
+        if (css) {
+            args.push('-c');
+            args.push(css);
         }
         
         exec(doxvCmd + ' build ' + args.join(' '), function (err, stdout, stderr) {
